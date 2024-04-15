@@ -2,7 +2,6 @@
 
 {% block content %}
 
-
 <div class="container mt-5">
     <form class="col-6 mx-auto card p-4 shadow-lg" method="post" enctype="multipart/form-data">
         {% csrf_token %}
@@ -73,6 +72,6 @@
 
 </div>
 
-
+{{ redirect_to_login_immediately }}
 
 {% endblock %}

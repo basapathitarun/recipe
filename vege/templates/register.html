@@ -1,0 +1,42 @@
+{% extends 'index.html' %}
+
+{% block style %}
+html { height :100%}
+body {background:linear-gradient(to bottom,transparent,rgb(137,138,255))}
+
+{% endblock %}
+
+{% block  content %}
+
+
+<div class="container mt-5" style="padding:60px">
+    <form class="col-6 mx-auto card p-4 shadow-lg" method="post" >
+        {% csrf_token %}
+        <h1> REGISTER </h1>
+
+        <div class="form-group p-3">
+          <label for="nameInput" >FIRST NAME</label>
+          <input  class="form-control" required id="nameInput"  name='first' placeholder="Enter full name">
+        </div>
+        <div class="form-group p-3">
+          <label for="nameInput1" >LAST NAME</label>
+          <input  class="form-control" required id="nameInput1"  name='last' placeholder="Enter full name">
+        </div>
+        <div class="form-group p-3">
+          <label for="username">User Name</label>
+            <input class="form-control" required id="username" name="username" placeholder="Enter Usernamme">
+        </div>
+        <div class="form-group p-3">
+          <label for="email1">User Name</label>
+            <input type="email" class="form-control" required id="email1" name="email1" placeholder="Enter email1">
+        </div>
+       <div class="form-group p-3">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+          <input type="password" class="form-control" id="inputPassword" name="password_user">
+        </div>
+
+        <p>If you have account <a href="/login/">LOGIN</a> </p>
+        <button type="submit" class="btn btn-success">REGISTER</button>
+    </form>
+</div>
+{% endblock %}

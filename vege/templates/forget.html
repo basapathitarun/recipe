@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+
+{% block style %}
+html { height :100%}
+body {background:linear-gradient(to bottom,transparent,rgb(137,138,255))}
+
+{% endblock %}
+
+{% block  content %}
+
+<div class="container mt-5" style="padding:60px">
+    <form class="col-6 mx-auto card p-4 shadow-lg" method="post" >
+        {% csrf_token %}
+        <h1> REGISTER </h1>
+
+        <div class="form-group p-3">
+          <label for="nameInput" >User Name</label>
+          <input  class="form-control" required id="nameInput"  name='first' placeholder="Enter User Name">
+        </div>
+
+        <button type="submit" class="btn btn-success"> Send Mail</button>
+    </form>
+</div>
+{% endblock %}
